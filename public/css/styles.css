@@ -91,7 +91,8 @@ h1 {
 }
 
 .features h2 {
-  color: rgb(1, 121, 111);
+  /* color: rgb(1, 121, 111); */
+  color:#100333 ;
   margin-bottom: 0.5rem;
 }
 
@@ -104,12 +105,14 @@ h1 {
   list-style: none;
   margin-bottom: 0.3rem;
   font-size: 0.95rem;
-  color: rgb(1, 121, 111);
+  /* color: rgb(1, 121, 111); */
+   color:#100333 ;
 }
 
 .features button {
   margin-top: 0.8rem;
-  background-color: rgb(1, 121, 111);
+  background-color:#100333 ;;
+  /* background-color: rgb(1, 121, 111); */
   color: white;
   border: none;
   padding: 0.6rem 1rem;

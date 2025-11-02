@@ -8,7 +8,7 @@
 
 /* MOBILE VIEW */
 
-/* 1.     Top header */
+/* Top header */
 #top-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -38,7 +38,7 @@
   color: #100333;
 }
 
-/* 2. Navigation */
+/* Navigation */
 nav {
   background-color: #232023;
   font-size: 1rem;
@@ -188,6 +188,7 @@ footer {
   margin-top: 30px;
 }
 
+/* TABLET AND DESKTOP VIEW */
 @media (min-width: 768px) {
   .features {
     top: 20%;
@@ -204,11 +205,8 @@ footer {
   }
 
   .ratings {
-    /* display: flex;
-    flex-direction: column; */
     grid-column: 2/ -1;
     grid-row: auto;
-    /* align-items: flex-start; */
     margin: 0 1rem;
   }
 

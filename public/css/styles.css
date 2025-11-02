@@ -148,6 +148,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  width: 95%;
 }
 
 h1,
@@ -172,7 +173,7 @@ h2 {
   height: 90px;
   object-fit: contain;
   background-color: rgb(1, 121, 111);
-  padding: 1rem 4rem;
+  padding: 1rem 3.3rem;
   border-radius: 4px;
 }
 

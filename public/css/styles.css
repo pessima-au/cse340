@@ -82,7 +82,7 @@ h1 {
 .features {
   position: absolute;
   top: 15%;
-  left: 5;
+  left: 5%;
   background: rgba(255, 255, 255, 0.8);
   padding: 1rem 1rem;
   border-radius: 8px;

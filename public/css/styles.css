@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 10px 0;
+  padding: 1rem 0.3rem;
   font-family: Montserrat;
 }
 
@@ -54,8 +54,12 @@ nav {
 }
 
 .navigation li {
-  text-decoration: none;
   list-style: none;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: white;
 }
 
 h1 {
@@ -69,8 +73,6 @@ h1 {
   max-width: 1000px;
   margin: 2rem auto;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
 }
 
 .hero-image {

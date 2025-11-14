@@ -24,10 +24,11 @@ body {
 }
 
 main {
-  flex: 1; 
+  flex: 1;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -158,7 +159,7 @@ nav {
 h1,
 h2 {
   font-family: Montserrat;
-   padding: 1rem;
+  padding: 1rem;
 }
 
 #upgrades {
@@ -256,14 +257,13 @@ footer {
 
 .details-info {
   overflow: hidden;
-   padding: 1rem;
+  padding: 1rem;
 }
 
- .vehicle-details img {
+.vehicle-details img {
   height: 100%;
   width: 100%;
-   }
-
+}
 
 /* TABLET AND DESKTOP VIEW */
 @media (min-width: 768px) {
@@ -315,16 +315,16 @@ footer {
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
     margin: 2rem;
-    padding: 1rem
+    padding: 1rem;
   }
 
-   .vehicle-details img {
+  .vehicle-details img {
     grid-column: 1/2;
-   }
+  }
 
-   .details-info {
+  .details-info {
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
-   }
+  }
 }

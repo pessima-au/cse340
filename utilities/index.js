@@ -71,3 +71,25 @@ Util.buildClassificationGrid = async function (data) {
   }
   return grid;
 };
+
+Util.buildByInventoryId = async function (vehicle) {
+  if (!vehicle) {
+    return '<p class="notice">Vehicle not found.</p>';
+  }
+  
+  let div = '<div class="vehicle-details">';
+  div += `<img src="${vehicle.inv_image}" alt="Image of ${vehicle.inv_make} ${vehicle.inv_model} on CSE Motors">`;
+  div += '<div class="details-info">';
+  div += `<h3>${vehicle.inv_make} ${vehicle.inv_model} Details</h3>`;
+  div += `<p><strong>Price: $${new Intl.NumberFormat("en-US").format(
+    vehicle.inv_price
+  )}</strong></p>`;
+  div += `<p><strong>Description: </strong>${vehicle.inv_description}</p>`;
+  div += `<p><strong>Color: </strong>${vehicle.inv_color}</p>`;
+  div += `<p><strong>Miles: </strong>${new Intl.NumberFormat("en-US").format(
+    vehicle.inv_miles
+  )}</p>`;
+  div += "</div>";
+  div += "</div>";
+  return div;
+}

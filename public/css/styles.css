@@ -17,6 +17,21 @@
   font-family: Montserrat;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; 
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .siteName {
   grid-column: 1/2;
   justify-self: start;
@@ -143,6 +158,7 @@ nav {
 h1,
 h2 {
   font-family: Montserrat;
+   padding: 1rem;
 }
 
 #upgrades {
@@ -187,7 +203,7 @@ footer {
   padding: 1rem 0.3rem;
 }
 
-/* Classification display grid */
+/* CLASSIFICATION DISPLAY GRID */
 #inv-display {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -226,6 +242,28 @@ footer {
 .namePrice {
   margin: 1rem;
 }
+
+/* VEHICLE DETAIL PAGE - MOBILE VIEW */
+.vehicle-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 1rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.details-info {
+  overflow: hidden;
+   padding: 1rem;
+}
+
+ .vehicle-details img {
+  height: 100%;
+  width: 100%;
+   }
+
 
 /* TABLET AND DESKTOP VIEW */
 @media (min-width: 768px) {
@@ -270,4 +308,23 @@ footer {
   #upgrades h2 {
     margin-top: 2rem;
   }
+
+  /* VEHICLE DETAIL WIDE SCREEN VIEW */
+  .vehicle-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    margin: 2rem;
+    padding: 1rem
+  }
+
+   .vehicle-details img {
+    grid-column: 1/2;
+   }
+
+   .details-info {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+   }
 }

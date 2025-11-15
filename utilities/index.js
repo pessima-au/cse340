@@ -93,3 +93,4 @@ Util.buildByInventoryId = async function (vehicle) {
   div += "</div>";
   return div;
 }
+

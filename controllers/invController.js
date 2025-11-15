@@ -33,4 +33,9 @@ invCont.buildByInventoryId = async function (req, res, next) {
   });
 };
 
+
+invCont.triggerError = function (req, res, next) {
+  next(new Error("Intentional server error for Task 3"));
+};
+
 module.exports = invCont;

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>
+            <%= title %>
+        </title>
+    </head>
+
+    <body>
+        <%- nav %>
+            <main>
+                <h1>
+                    <%= title %>
+                </h1>
+                <p class="notice">
+                    <%= message %>
+                </p>
+                <% if (error && error.stack) { %>
+                    <pre><%= error.stack %></pre>
+                    <% } %>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

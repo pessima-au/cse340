@@ -12,9 +12,8 @@ const app = express();
 const static = require("./routes/static");
 const baseController = require("./controllers/baseController");
 const inventoryRoute = require("./routes/inventoryRoute");
-const miscRouter = require("./routes/miscRoute");
-const errorHandler = require("./middleware/errorHandler");
 const utilities = require("./utilities/");
+const errorController = require("./controllers/errorController");
 
 // populate nav for all views — must run before route handlers
 app.use(async (req, res, next) => {
@@ -43,19 +42,10 @@ app.use(static);
 // Index Routes
 app.get("/", baseController.buildHome);
 app.use("/inv", inventoryRoute);
-app.use("/", miscRouter);
-
-// 404 handler (must be before error handler)
-app.use((req, res) => {
-  res.status(404).render("errors/404", {
-    title: "Page Not Found",
-    nav: res.locals.nav || "",
-    message: "Sorry — the requested page could not be found.",
-  });
+app.use(errorController.handle404);
+app.use((err, req, res, next) => {
+  return errorController.get500(err, req, res, next);
 });
-
-// global error handler (last middleware)
-app.use(errorHandler);
 
 /* ***********************
  * Local Server Information
@@ -70,10 +60,3 @@ const host = process.env.HOST;
 app.listen(port, () => {
   console.log(`app listening on ${host}:${port}`);
 });
-
-// Log all routes
-app._router.stack
-  .filter((r) => r.route)
-  .forEach((r) =>
-    console.log(Object.keys(r.route.methods)[0].toUpperCase(), r.route.path)
-  );

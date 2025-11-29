@@ -1,5 +1,3 @@
-
-
 // 404 error handler
 exports.handle404 = (req, res) => {
   res.status(404).render("errors/404", {
@@ -10,14 +8,14 @@ exports.handle404 = (req, res) => {
 };
 
 // 500 error handler
-  exports.get500 = (err, req, res, next) => {
+exports.get500 = (err, req, res, next) => {
   console.error(err.stack);
   res.status(500).render("errors/500", {
     title: "Server Error",
     message:
       "Server error. This is an intentional server error for testing purposes.",
     nav: res.locals.nav,
-    error: process.env.NODE_ENV === "development" ? err : {  },
+    error: process.env.NODE_ENV === "development" ? err : {},
   });
 };
 
@@ -29,4 +27,3 @@ exports.triggerError = (req, res, next) => {
     next(err);
   }
 };
-    

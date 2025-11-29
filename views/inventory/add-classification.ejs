@@ -1,0 +1,30 @@
+<div class="add-classification">
+    <h1><%= title %></h1>
+
+    <!-- Flash / validation messages -->
+    <%- messages() %>
+
+        <form action="/inv/add-classification" method="post" class="classification-form">
+            <fieldset>
+                <legend>New Classification</legend>
+
+                <p class="classification-info">
+                    Classification names must contain only letters.
+                    <strong>No spaces or special characters allowed.</strong>
+                </p>
+
+                <label for="classification_name">Classification Name:</label>
+                <input 
+                       type="text" 
+                       id="classification_name" 
+                       name="classification_name"
+                       required pattern="^[A-Za-z]+$"
+                       placeholder="Example: SUV"
+                       value="<%= locals.classification_name %>">
+
+                <button type="submit" class="btn-submit">
+                    Add Classification
+                </button>
+            </fieldset>
+        </form>
+    </div>
